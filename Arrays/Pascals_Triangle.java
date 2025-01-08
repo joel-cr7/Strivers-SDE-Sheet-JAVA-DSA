@@ -1,11 +1,12 @@
 package Arrays;
 
+import java.util.*;
 
 // Problem link: https://leetcode.com/problems/pascals-triangle/
 
-public class PascalsTriangle {
+public class Pascals_Triangle {
 
-    class Solution {
+    static class Solution {
 
         // Variation 1: Return the complete Pascal's triangle till the given number of row
 
@@ -17,13 +18,13 @@ public class PascalsTriangle {
         // Space complexity ~ O(1)
 
         public List<List<Integer>> generate(int numRows) {
-            List<List<Integer>> pascalTriangle = new ArrayList();
-            pascalTriangle.add(new ArrayList(List.of(1)));  // initial element will be 1
+            List<List<Integer>> pascalTriangle = new ArrayList<>();
+            pascalTriangle.add(new ArrayList<>(List.of(1)));  // initial element will be 1
     
             for(int i=1;i<numRows;i++){
                 List<Integer> prevRow = pascalTriangle.get(i-1);
                 // i+1 elements in each row with first and last element as 1
-                List<Integer> currRow = new ArrayList(List.of(1));            
+                List<Integer> currRow = new ArrayList<>(List.of(1));
                 for(int j=1;j<i;j++){
                     currRow.add(prevRow.get(j) + prevRow.get(j-1));
                 }
@@ -87,7 +88,7 @@ public class PascalsTriangle {
             int result[] = new int[row];
             int ans = 1;
             result[0] = 1;
-            for(int col=1;col<n;col++){
+            for(int col=1;col<row;col++){
                 ans = ans * (row - col);
                 ans = ans / col;
             }
