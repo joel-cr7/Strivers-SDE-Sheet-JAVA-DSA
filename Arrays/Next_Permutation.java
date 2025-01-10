@@ -2,6 +2,10 @@ package Arrays;
 
 import java.util.*;
 
+
+// Problem link: https://leetcode.com/problems/next-permutation/description/
+
+
 public class Next_Permutation {
 
     /**
