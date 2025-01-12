@@ -60,7 +60,7 @@ public class Pascals_Triangle {
 
             int nr = row-1;  // numerator
             int resultEle = 1;
-            for(int i=0;i<col;i++){
+            for(int i=0;i<col-1;i++){
                 resultEle = resultEle * (nr-i);
                 resultEle = resultEle / (i+1);
             }
