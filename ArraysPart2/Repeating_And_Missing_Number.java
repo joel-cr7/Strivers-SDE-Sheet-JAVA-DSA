@@ -82,7 +82,11 @@ public class Repeating_And_Missing_Number {
      * Assume the repeating number = X and the missing number = Y.
      * Sn = (N*(N+1))/2    (Sum of the first N numbers)
      * S = sum of array elements.
-     * Therefore, X - Y = S - Sn …………………equation 1
+     *
+     * Eg: array is [4,3,6,2,1,1] so S = (4+3+6+2+1+1) and Sn = (1+2+3+4+5+6), subtracting both
+     * ie. S - Sn we get (4+3+6+2+1+1) - (1+2+3+4+5+6) = 1 - 5   ==>  X - Y  (as 1 is repeating no. and 5 is missing no.)
+     *
+     * Therefore we can say, X - Y = S - Sn …………………equation 1
 
      * S2n = (N*(N+1)*(2N+1))/6     (Sum of squares of the first N numbers)
      * S2 = sum of squares of array elements.
