@@ -16,7 +16,7 @@ import java.util.*;
 public class Majority_Element_2 {
 
     /** Brute Force Approach:
-     * Loop over elements and count the elements occurrence
+     * Use nested loops and count the elements occurrence
      * */
 
     // Time Complexity: O(n^2)
@@ -74,9 +74,9 @@ public class Majority_Element_2 {
     /** Optimal Approach:
      * Use Moore's Voting algorithm:
      *
-     * Initialize 2 variables:
-     * Count –  for tracking the count of element
-     * ele – for which element we are counting
+     * Initialize 4 variables:
+     * 2 for Count –  for tracking the count of element
+     * 2 for ele – for which element we are counting
      *
      * Traverse through the given array.
      *      If Count is 0 then store the current element of the array as ele.
@@ -94,10 +94,12 @@ public class Majority_Element_2 {
 
     class Solution {
         public List<Integer> majorityElement(int[] nums) {
-            List<Integer> ans = new ArrayList();
+            List<Integer> ans = new ArrayList<>();
             int cnt1 = 0, cnt2 = 0;
             int ele1 = -1, ele2 = -1;
             for(int num: nums){
+                // first check if its present in ele1 or ele2, as if we check count first
+                // it may happen that either ele1 or ele2 count is 0 where as that num is present in another ele
                 if(num==ele1){
                     cnt1++;
                 }
@@ -119,7 +121,6 @@ public class Majority_Element_2 {
             }
 
             // verifying if freq of ele1 and ele2 are  > n/3
-
             int freq1 = 0, freq2 = 0;
             for(int num: nums){
                 if(num==ele1) freq1++;

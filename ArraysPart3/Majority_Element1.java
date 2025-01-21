@@ -19,7 +19,6 @@ public class Majority_Element1 {
         public int majorityElement(int[] nums) {
             int ans = -1;
             int n = nums.length;
-            Map<Integer, Integer> mp = new HashMap<>();
 
             for(int num: nums){
                 int cnt = 0;
