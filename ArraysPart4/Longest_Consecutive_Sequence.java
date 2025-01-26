@@ -7,16 +7,16 @@ import java.util.*;
 
 
 public class Longest_Consecutive_Sequence {
+
+    /** Brute Force Approach:
+     * Use nested loops and linear search in the array to find the next element in sequence
+     * Keep track of current count of element sequence and longest sequence
+     * */
+
+    // Time Complexity: O(n^3)
+    // Space complexity: O(1)
+
     static class Solution1 {
-
-        /** Brute Force Approach:
-         * Use nested loops and linear search in the array to find the next element in sequence
-         * Keep track of current count of element sequence and longest sequence
-         * */
-
-        // Time Complexity: O(n^3)
-        // Space complexity: O(1)
-
         private static boolean linearSearch(int[] nums, int ele){
             for (int num : nums) {
                 if (num == ele) {
@@ -46,6 +46,8 @@ public class Longest_Consecutive_Sequence {
     /** Better Approach:
      * Sort array to get consecutive elements together
      * Keep track of counter and longest sequence
+     *
+     * Alternately we can use Treeset as well, which will take same time complexity, but extra space
      * */
 
     // Time Complexity: O(nlogn + n)

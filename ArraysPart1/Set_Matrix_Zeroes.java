@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysPart1;
 
 
 // Problem link: https://leetcode.com/problems/set-matrix-zeroes/description/

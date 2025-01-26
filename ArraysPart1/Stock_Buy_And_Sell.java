@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysPart1;
 
 
 //Problem link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
