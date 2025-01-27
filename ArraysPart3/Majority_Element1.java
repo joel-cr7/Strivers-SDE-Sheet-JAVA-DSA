@@ -9,7 +9,7 @@ import java.util.*;
 public class Majority_Element1 {
 
     /** Brute Force Approach:
-     * Use Map to store freq. count of elements
+     * Use nested loops to count of elements
      * */
 
     // Time Complexity: O(n^2)
@@ -109,7 +109,7 @@ public class Majority_Element1 {
     static class Solution3 {
         public int majorityElement(int[] nums) {
             int ele = -1;
-            int cnt = 0;        //
+            int cnt = 0;
             for(int i=0;i<nums.length;i++){
                 if(cnt==0){
                     ele = nums[i];

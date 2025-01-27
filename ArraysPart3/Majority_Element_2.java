@@ -79,8 +79,8 @@ public class Majority_Element_2 {
      * 2 for ele – for which element we are counting
      *
      * Traverse through the given array.
-     *      If Count is 0 then store the current element of the array as ele.
      *      If the current element and ele are the same increase the Count by 1.
+     *      If Count is 0 then store the current element of the array as ele.
      *      If they are different decrease the Count by 1.
      * The integer present in ele should be the result we are expecting
      *
